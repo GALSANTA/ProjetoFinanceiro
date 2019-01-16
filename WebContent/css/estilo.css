@@ -1,0 +1,38 @@
+.imgresizable{
+    height: 50px;
+    margin-left: 20px;
+}
+
+/*index*/
+.banner_text{
+	text-shadow: 3px 3px 3px #555555;
+	font-size: 60px !important;
+}
+
+
+
+main{
+
+	min-height: 500px;
+}
+
+ header, main, footer {
+      padding-left: 300px;
+    }
+
+
+/* desktop*/
+
+@media only screen and (max-width : 992px) {
+
+
+	.side-nav-mod{
+		display: none;
+	}
+	header, main, footer {
+        padding-left: 0;
+      }
+
+
+
+}

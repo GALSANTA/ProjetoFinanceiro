@@ -1,0 +1,61 @@
+CREATE TABLE tb_usuarios(
+user_id serial primary key,
+user_nome VARCHAR(50) NOT NULL,
+user_sobrenome VARCHAR(50) NOT NULL,
+user_email VARCHAR(50) NOT NULL,
+user_senha VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE tb_imagem(
+
+img_id serial primary key,
+user_id INT(11) NOT NULL,
+img_nome VARCHAR(50) NOT NULL,
+img_local VARCHAR(50) NOT NULL
+
+
+);
+
+
+
+CREATE TABLE tb_contas(
+ con_id serial primary key,
+ user_id INT(11) NOT NULL,
+ con_nome VARCHAR(50) NOT NULL,
+ con_agencia VARCHAR(50) NOT NULL, 
+ con_corrente VARCHAR(50) NOT NULL
+
+);
+
+
+CREATE TABLE tb_transacoes(
+tran_id serial primary key,
+con_id INT(11) NOT NULL,
+tran_tipo VARCHAR(50) NOT NULL,
+tran_valor VARCHAR(50) NOT NULL,
+tran_data DATE NOT NULL
+
+);
+
+
+CREATE TABLE tb_background(
+
+img_id serial primary key,
+user_id INT(11) NOT NULL,
+img_nome VARCHAR(50) NOT NULL,
+img_local VARCHAR(50) NOT NULL
+
+
+);
+
+CREATE TABLE tb_imagemconta(
+
+img_id serial primary key,
+user_id INT(11) NOT NULL,
+con_id INT(11) NOT NULL,
+img_nome VARCHAR(50) NOT NULL,
+img_local VARCHAR(50) NOT NULL
+
+
+);
